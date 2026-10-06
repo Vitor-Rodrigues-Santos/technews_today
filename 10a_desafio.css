@@ -1,0 +1,159 @@
+/* === DESAFIO TECHNEWS - PORTAL MODERNO === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0e27;
+    color: #e4e4e7;
+    line-height: 1.6;
+}
+
+/* Header com glassmorphism */
+.cabecalho {
+    background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(219, 39, 119, 0.1));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 36px;
+    background: linear-gradient(90deg, #6366f1, #db2777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* Layout principal com Grid */
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Artigo com card moderno */
+.artigo-destaque {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.artigo-destaque:hover {
+    transform: translateY(-5px);
+}
+
+.artigo-destaque h2{
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.data {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.leia-mais {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.leia-mais summary {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* Seção de vídeo */
+.secao-video {
+    text-align: center;
+}
+
+.video-embed {
+    border-radius: 15px;
+    border: 2px solid #6366f1;
+    margin-top: 15px;
+}
+
+/* Newsletter com gradiente */
+.secao-newsletter {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.form-newsletter input,
+.form-newsletter select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+}
+
+.form-newsletter option {
+    color: black;
+}
+
+.checkbox-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.btn-inscrever {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-inscrever:hover {
+    transform: scale(1.05);
+}
+
+/* Footer minimalista */
+.rodape {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #64748b;
+}
+
+.rodape a {
+    color: #60a5fa;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .conteudo {
+        grid-template-columns: 2fr 1fr;
+    }
+    .artigo-destaque {
+        grid-column: span 2;
+    }
+}
